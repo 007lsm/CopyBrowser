@@ -6,8 +6,12 @@ import android.view.WindowManager;
 
 import com.example.admin.myapplication.utils.StateBarTranslucentUtils;
 import com.example.admin.myapplication.view.CustomTutorialSupportFragment;
+import com.orhanobut.logger.Logger;
+
 
 public class WelcomeActivity extends AppCompatActivity {
+
+    private static final String TAG = "WelcomeActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,5 +31,9 @@ public class WelcomeActivity extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Logger.t(TAG).d("onResume");
+    }
 }

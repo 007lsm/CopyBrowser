@@ -79,7 +79,7 @@ public class LaunchActivity extends Activity implements LaunchView {
 
     private void startWelcomeGuideActivityWithCheck(){
         if (PermissionUtils.hasSelfPermissions(this, PERMISSION_STARTWELCOMEGUIDEACTIVITY)) {//有权限
-            skipToPage(LoginActivity.class);
+            skipToPage(WelcomeActivity.class);
         } else {//没有权限
             if (PermissionUtils.shouldShowRequestPermissionRationale(this, PERMISSION_STARTWELCOMEGUIDEACTIVITY)) {//禁止不再访问
                 showRationaleForCamera(new StartWelcomeGuideActivityPermissionRequest(this));

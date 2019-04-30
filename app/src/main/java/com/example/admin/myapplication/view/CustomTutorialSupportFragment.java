@@ -20,8 +20,6 @@ import com.cleveroad.slidingtutorial.TutorialOptions;
 import com.cleveroad.slidingtutorial.TutorialPageOptionsProvider;
 import com.cleveroad.slidingtutorial.TutorialPageProvider;
 import com.cleveroad.slidingtutorial.TutorialSupportFragment;
-import com.example.admin.myapplication.LaunchActivity;
-import com.example.admin.myapplication.LoginActivity;
 import com.example.admin.myapplication.MainActivity;
 import com.example.admin.myapplication.R;
 import com.example.admin.myapplication.config.Const;
