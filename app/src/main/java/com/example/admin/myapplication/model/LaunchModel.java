@@ -11,15 +11,14 @@ import com.example.admin.myapplication.utils.SPUtils;
 public class LaunchModel implements LaunchModelImpl {
 
     @Override
-    public void skipToInfoJudge(final OnEnterIntoFinishListener onEnterIntoFinishListener) {
-        boolean isFirstOpen = (boolean) SPUtils.get(BaseApplicationUtils.getContext(), Const.FIRST_OPEN, false);
+    public void skipToInfoJudge(boolean isFirstOpen,final OnEnterIntoFinishListener onEnterIntoFinishListener) {
         if(!isFirstOpen) {
-            onEnterIntoFinishListener.isFirstOpen();
+            onEnterIntoFinishListener.isNotFirstOpen();
         } else {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    onEnterIntoFinishListener.isNotFirstOpen();
+                    onEnterIntoFinishListener.isFirstOpen();
                 }
             },2000);
         }

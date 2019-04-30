@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">望眼欲穿</string>
+
+    <string name="text_web_ceo">美文/微信头条</string>
+    <string name="text_web_dev">生活必备的各种应用</string>
+    <string name="text_e_commerce">必不可少的工具大全</string>
 </resources>
