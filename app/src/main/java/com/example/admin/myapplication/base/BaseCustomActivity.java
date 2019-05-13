@@ -10,8 +10,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.widget.Toast;
 
+import com.orhanobut.logger.Logger;
+
+
 public abstract class BaseCustomActivity extends AppCompatActivity implements IBaseView{
 
+    private static final String TAG = "BaseCustomActivity";
     private ProgressDialog mProgressDialog;
     private FragmentManager mFragmentManager;
 
@@ -23,7 +27,7 @@ public abstract class BaseCustomActivity extends AppCompatActivity implements IB
     /**
      * 初始化控件
      */
-    protected abstract void initView();
+    protected abstract void initView(Bundle savedInstanceState);
 
     /**
      * 初始化控制中心
@@ -36,7 +40,7 @@ public abstract class BaseCustomActivity extends AppCompatActivity implements IB
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         initContentView();
         initPresenter();
-        initView();
+        initView(savedInstanceState);
     }
 
     /**
@@ -66,7 +70,7 @@ public abstract class BaseCustomActivity extends AppCompatActivity implements IB
      */
     public void addFragment(int res, Fragment fragment, String tag) {
         FragmentTransaction fragmentTransaction = getTransaction();
-        fragmentTransaction.add(res, fragment);
+        fragmentTransaction.add(res, fragment, tag);
         fragmentTransaction.commit();
     }
 
@@ -84,14 +88,19 @@ public abstract class BaseCustomActivity extends AppCompatActivity implements IB
 
     /**
      * 显示一个fragment
-     * @param res
      * @param fragment
-     * @param tag
      */
-    public void showFragment(int res, Fragment fragment, String tag) {
+    public void showFragment(Fragment fragment) {
+        Logger.t(TAG).i("showFragment");
         FragmentTransaction fragmentTransaction = getTransaction();
         fragmentTransaction.show(fragment);
         fragmentTransaction.commit();
+    }
+
+    public void hideFragment(Fragment fragment) {
+        if(!fragment.isHidden()) {
+            getTransaction().hide(fragment).commit();
+        }
     }
 
     @Override

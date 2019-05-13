@@ -4,4 +4,11 @@
     <string name="text_web_ceo">美文/微信头条</string>
     <string name="text_web_dev">生活必备的各种应用</string>
     <string name="text_e_commerce">必不可少的工具大全</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_news_fragment">news_fragment</string>
+    <string name="text_wechat_fragment">wechat_fragment</string>
+    <string name="text_find_fragment">find_fragment</string>
+    <string name="text_me_fragment">me_fragment</string>
 </resources>

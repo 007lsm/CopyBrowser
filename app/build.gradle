@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 'android-Q'
     defaultConfig {
         applicationId "com.example.admin.myapplication"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 'Q'
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -89,4 +89,6 @@ dependencies {
     implementation "com.cleveroad:slidingtutorial:1.0.5"
     //Logger类集成
     implementation 'com.orhanobut:logger:2.1.1'
+    //Eventbus 代替Android传统的Intent,Handler,Broadcast或接口函数,在Fragment,Activity,Service线程之间传递数据，执行方法
+    implementation 'org.greenrobot:eventbus:3.0.0'
 }

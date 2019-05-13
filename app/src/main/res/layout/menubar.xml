@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.example.admin.myapplication.view.TabBar_Mains
+        android:id="@+id/tb_recommend_mains"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:icon="@drawable/tabbar_mains_news"
+        app:name="新闻资讯" />
+
+    <com.example.admin.myapplication.view.TabBar_Mains
+        android:id="@+id/tb_cityfinder_mains"
+        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:icon="@drawable/tabbar_mains_news"
+        app:name="微信精选"/>
+
+    <com.example.admin.myapplication.view.TabBar_Mains
+        android:id="@+id/tb_findtravel_mains"
+        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:icon="@drawable/tabbar_mains_news"
+        app:name="发现"/>
+
+    <com.example.admin.myapplication.view.TabBar_Mains
+        android:id="@+id/tb_me_mains_mains"
+        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        app:icon="@drawable/tabbar_mains_news"
+        app:name="我的"/>
+
+</LinearLayout>
