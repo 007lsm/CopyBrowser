@@ -4,4 +4,14 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">#FFFFFF</color>
+    <color name="color_calendar_lunar_show">#cccccc</color>
+    <color name="color_calendar_ring_show">#303F9F</color>
+    <color name="colorPrimaryText">#212121</color>
+
+    <!--日历界面-->
+    <color name="darker_gray">#aaa</color>
+    <color name="secondary_text">#757575</color>
+    <color name="color_holiday_frame">#FFFF4081</color>
+    <color name="color_holiday_text">#22FF4081</color>
+
 </resources>

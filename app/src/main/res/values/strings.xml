@@ -11,4 +11,8 @@
     <string name="text_wechat_fragment">wechat_fragment</string>
     <string name="text_find_fragment">find_fragment</string>
     <string name="text_me_fragment">me_fragment</string>
+
+
+    <!--日历界面-->
+    <string name="calendar_toolbar_name">日历</string>
 </resources>

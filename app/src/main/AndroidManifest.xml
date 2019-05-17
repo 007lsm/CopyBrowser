@@ -4,10 +4,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
     <uses-permission android:name="READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".base.BaseApplication"
@@ -24,26 +24,27 @@
         <activity
             android:name=".LaunchActivity"
             android:exported="true"
-            android:theme="@style/launcherTheme">
-
-        </activity>
+            android:theme="@style/launcherTheme" />
         <activity
             android:name=".WelcomeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".test.LoginActivity" >
-        </activity>
-        <activity android:name=".MainActivity" >
+        <activity android:name=".test.LoginActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <service
             android:name=".test.TestService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".test.TestActivity"></activity>
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".module.me.CalendarActivity" />
+        <activity android:name=".module.me.calendar.ZxingActivity"></activity>
     </application>
 
 </manifest>

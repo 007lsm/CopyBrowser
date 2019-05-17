@@ -23,7 +23,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * 初始化布局文件Id
      */
-    protected abstract void initView();
+    protected abstract void initView(View view);
 
     /**
      *初始化布局
@@ -55,7 +55,7 @@ public abstract class BaseFragment extends Fragment {
             }
         } else {
             mLayoutView = getCreateView(inflater, container);
-            initView();
+            initView(mLayoutView);
         }
         return mLayoutView;
     }

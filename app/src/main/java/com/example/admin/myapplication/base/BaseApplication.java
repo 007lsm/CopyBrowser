@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.util.DisplayMetrics;
 
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.BuildConfig;
@@ -16,7 +17,7 @@ import com.orhanobut.logger.PrettyFormatStrategy;
 public class BaseApplication extends Application {
 
     private static BaseApplication mBaseApplication;
-
+    public static float fDensity;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -47,6 +48,13 @@ public class BaseApplication extends Application {
                 return true;
             }
         });
+        //获取屏幕基准比例
+        getDensity();
+    }
+
+    public void getDensity() {
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        fDensity = metrics.density;
     }
 
     public static Context getApplicationContexts() {

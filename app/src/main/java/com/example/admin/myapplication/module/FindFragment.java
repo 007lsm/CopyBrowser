@@ -1,7 +1,8 @@
-package com.example.admin.myapplication.module.me;
+package com.example.admin.myapplication.module;
 
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.example.admin.myapplication.R;
 import com.example.admin.myapplication.base.BaseFragment;
@@ -17,7 +18,7 @@ public class FindFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
 
     }
 

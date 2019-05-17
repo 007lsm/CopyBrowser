@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".module.me.MeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/tv_me_fragment_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <ImageView
+            android:id="@+id/iv_home_bg"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/bg1"
+            android:scaleType="centerCrop" />
+
+        <TextView android:id="@+id/tv_motto_me"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="我愿做你世界里的太阳，给你温暖"
+            android:textSize="12sp"
+            android:layout_alignParentBottom="true"
+            android:gravity="right"
+            android:paddingBottom="30dp"
+            android:textColor="@color/white"
+            android:maxLines="2"/>
+
+        <LinearLayout android:id="@+id/ll_bg"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_toRightOf="@+id/iv_home_bg"
+            android:orientation="vertical"
+            android:background="@drawable/bg_head"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cycle_header"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_head"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ocnyang" />
+
+            <TextView android:id="@+id/tv_username_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:lines="1"
+                android:text="未设置"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_setting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/text_me_fragment"
-        android:gravity="center"
-        android:textSize="20sp"/>
+        android:layout_marginTop="240dp"/>
 
-</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/icon_edit"
+        app:fabSize="mini"
+        app:layout_anchor="@id/tv_motto_me"
+        app:layout_anchorGravity="right|bottom" />
+</android.support.design.widget.CoordinatorLayout>

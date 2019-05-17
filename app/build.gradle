@@ -4,7 +4,7 @@ android {
     compileSdkVersion 'android-Q'
     defaultConfig {
         applicationId "com.example.admin.myapplication"
-        minSdkVersion 15
+        minSdkVersion 24
         targetSdkVersion 'Q'
         versionCode 1
         versionName "1.0"
@@ -77,18 +77,24 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
-
     //权限申请工具
     implementation 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
-
     implementation 'com.android.support:multidex:1.0.1'
     //百分比布局
     implementation 'com.android.support:percent:28.0.0'
     //引导页使用库
-    implementation "com.cleveroad:slidingtutorial:1.0.5"
+    implementation 'com.cleveroad:slidingtutorial:1.0.5'
     //Logger类集成
     implementation 'com.orhanobut:logger:2.1.1'
     //Eventbus 代替Android传统的Intent,Handler,Broadcast或接口函数,在Fragment,Activity,Service线程之间传递数据，执行方法
     implementation 'org.greenrobot:eventbus:3.0.0'
+    //圆形ImageView控件
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    //使用floating控件 noinspection GradleCompatible
+    implementation 'com.android.support:design:27.1.0'
+    //recycleView控件使用
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //日历控件
+    implementation 'com.github.prolificinteractive:material-calendarview:1.4.3'
 }

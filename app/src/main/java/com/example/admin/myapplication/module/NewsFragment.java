@@ -1,7 +1,8 @@
-package com.example.admin.myapplication.module.me;
+package com.example.admin.myapplication.module;
 
 
 import android.support.v4.app.Fragment;
+import android.view.View;
 
 import com.example.admin.myapplication.R;
 import com.example.admin.myapplication.base.BaseFragment;
@@ -9,21 +10,21 @@ import com.example.admin.myapplication.base.BaseFragment;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class WechatFragment extends BaseFragment {
+public class NewsFragment extends BaseFragment {
 
-    public static WechatFragment getInstance(){
-        WechatFragment fragment = new WechatFragment();
+    public static NewsFragment getInstance(){
+        NewsFragment fragment = new NewsFragment();
         return fragment;
     }
 
     @Override
-    protected void initView() {
+    protected void initView(View view) {
 
     }
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.fragment_wechat;
+        return R.layout.fragment_news;
     }
 
     @Override
